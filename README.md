@@ -23,4 +23,4 @@ A simple, responsive web-based finance tracker built with **HTML**, **CSS**, and
 - CSS3
 - JavaScript
 
-  ⚠️ Note: All entries are temporary and will be cleared upon page reload. Persistent storage can be added in future improvements.
+⚠️ Note: All entries are temporary and will be cleared upon page reload. Persistent storage can be added in future improvements.
