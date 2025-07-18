@@ -1,0 +1,156 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Finance Tracker</title>
+    <link rel="icon" href="money-savings-finance-vector-linear-600nw-2478895897.webp" type="image/x-icon">
+   <link rel="stylesheet" href="style.css">
+   <script src="expense.js"></script>
+    
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Personal Finance Tracker</h1>
+            <p>Manage your expenses, track savings, and learn about investments</p>
+        </div>
+
+        <div class="tabs">
+            <div class="tab active" onclick="showTab('tracker')">Tracker</div>
+            <div class="tab" onclick="showTab('investments')">Investment Guide</div>
+        </div>
+
+        <div id="tracker" class="tab-content active">
+            <div class="summary-cards">
+                <div class="summary-card expense">
+                    <h3>Total Expenses</h3>
+                    <div class="amount" id="totalExpenses">₹0.00</div>
+                </div>
+                <div class="summary-card savings">
+                    <h3>Total Savings</h3>
+                    <div class="amount" id="totalSavings">₹0.00</div>
+                </div>
+                <div class="summary-card balance">
+                    <h3>Net Balance</h3>
+                    <div class="amount" id="netBalance">₹0.00</div>
+                </div>
+            </div>
+
+            <div class="form-section">
+                <h2 style="margin-bottom: 20px; color: #333;">Add New Entry</h2>
+                <form id="financeForm">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="type">Type</label>
+                            <select id="type" required>
+                                <option value="">Select Type</option>
+                                <option value="expense">Expense</option>
+                                <option value="savings">Savings</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="amount">Amount (₹)</label>
+                            <input type="number" id="amount" placeholder="0.00" step="0.01" min="0" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="description">Description</label>
+                        <input type="text" id="description" placeholder="Enter description..." required>
+                    </div>
+                    
+                    <button type="submit" class="btn">Add Entry</button>
+                </form>
+            </div>
+
+            <div class="item-list" id="itemsList">
+                <div class="empty-state">
+                    <h3>No entries yet</h3>
+                    <p>Add your first expense or savings entry using the form above</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="investments" class="tab-content">
+            <div class="investment-info">
+                <h2>Understanding Investments</h2>
+                
+                <h3>What is Investment?</h3>
+                <p>Investment is the process of putting money into assets with the expectation of generating income or profit over time. When you invest, you're essentially buying something today with the hope that it will be worth more in the future.</p>
+                
+                <h3>Why Do We Need Investment?</h3>
+                <p>Investment is crucial for several reasons:</p>
+                <ul>
+                    <li><strong>Beat Inflation:</strong> Money sitting in a savings account loses purchasing power over time due to inflation. Investments help your money grow faster than inflation.</li>
+                    <li><strong>Wealth Building:</strong> Investments can compound over time, helping you build significant wealth for the future.</li>
+                    <li><strong>Financial Goals:</strong> Whether it's buying a house, funding education, or retirement, investments help you reach major financial milestones.</li>
+                    <li><strong>Passive Income:</strong> Some investments provide regular income through dividends, interest, or rent.</li>
+                    <li><strong>Financial Security:</strong> A diversified investment portfolio provides financial security and independence.</li>
+                </ul>
+
+                <div class="highlight-box">
+                    <h4>💡 Key Principle: Time is Your Friend</h4>
+                    <p>The earlier you start investing, the more time your money has to grow through compound interest. Even small amounts invested regularly can grow into substantial sums over decades.</p>
+                </div>
+
+                <h3>How to Start Investing</h3>
+                <p>Here's a step-by-step approach to begin your investment journey:</p>
+                
+                <h4>1. Build Your Foundation</h4>
+                <ul>
+                    <li>Create an emergency fund (3-6 months of expenses)</li>
+                    <li>Pay off high-interest debt</li>
+                    <li>Establish a budget and track your expenses</li>
+                </ul>
+
+                <h4>2. Determine Your Investment Goals</h4>
+                <ul>
+                    <li>Short-term goals (1-5 years): Emergency fund, vacation, car</li>
+                    <li>Medium-term goals (5-15 years): House down payment, children's education</li>
+                    <li>Long-term goals (15+ years): Retirement, wealth building</li>
+                </ul>
+
+                <h4>3. Choose Your Investment Types</h4>
+                <ul>
+                    <li><strong>Stocks:</strong> Ownership shares in companies. Higher risk, higher potential returns.</li>
+                    <li><strong>Bonds:</strong> Loans to governments or corporations. Lower risk, steady returns.</li>
+                    <li><strong>Mutual Funds:</strong> Diversified portfolios managed by professionals.</li>
+                    <li><strong>ETFs:</strong> Exchange-traded funds that track market indices.</li>
+                    <li><strong>Real Estate:</strong> Property investments or REITs.</li>
+                    <li><strong>Fixed Deposits:</strong> Safe, guaranteed returns but lower growth.</li>
+                </ul>
+
+                <h4>4. Start Small and Learn</h4>
+                <ul>
+                    <li>Begin with small amounts you can afford to lose</li>
+                    <li>Use systematic investment plans (SIPs) for regular investing</li>
+                    <li>Diversify across different asset classes</li>
+                    <li>Continue learning about financial markets</li>
+                </ul>
+
+                <div class="highlight-box">
+                    <h4>⚠️ Important Reminders</h4>
+                    <p>• Never invest money you can't afford to lose<br>
+                    • Don't put all your eggs in one basket (diversify)<br>
+                    • Stay invested for the long term<br>
+                    • Review and rebalance your portfolio regularly<br>
+                    • Consider consulting with a financial advisor</p>
+                </div>
+
+                <h3>Investment Strategies for Beginners</h3>
+                <ul>
+                    <li><strong>Cost Averaging:</strong> Invest a fixed amount regularly regardless of market conditions</li>
+                    <li><strong>Index Fund Investing:</strong> Low-cost way to invest in the entire market</li>
+                    <li><strong>Target-Date Funds:</strong> Automatically adjust risk based on your retirement date</li>
+                    <li><strong>Robo-Advisors:</strong> Automated investing platforms for beginners</li>
+                </ul>
+
+                <p style="margin-top: 30px; font-style: italic; color: #667eea;">Remember: Investing is a marathon, not a sprint. Stay patient, stay disciplined, and let compound interest work its magic over time.</p>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>
